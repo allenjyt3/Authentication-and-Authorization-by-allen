@@ -36,8 +36,10 @@ namespace WebApiTokens
                 tk.Authtoken = tokendomain.AuthToken;
                 tk.IssuedOn = tokendomain.IssuedOn;
                 tk.ExpiryOn = tokendomain.ExpiryOn;
+                sc.SaveChanges();
             }
-            sc.SaveChanges();
+
+
             return tokendomain;
           
         }
